@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from rest_framework import status
-from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 # from rest_framework import viewsets
 from .models import covid
 from .serializers import covidSerializers,userSerializers
+
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 

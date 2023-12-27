@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.urls import path
 from . import views
-from rest_framework.routers import DefaultRouter
+# from rest_framework.routers import DefaultRouter
 
-router = DefaultRouter()
-router.register('api',views.covidView,basename='covid')
+# router = DefaultRouter()
+# router.register('api',views.covidView,basename='covid')
 
+urlpatterns = [
+    path('covid/',views.covidView.as_view()),
+    path('register/', views.userRegister.as_view()),
+]
 
